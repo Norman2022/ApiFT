@@ -1,18 +1,21 @@
+
 {
   "url": "https://api.clockify.me/api/v1",
   "headers": {
-    "X-Api-Key": "NDRmZWUwYzEtOTZhMS00NDk5LWJkZWItY2FiNmY1MjQ3NGNh",
+    "X-Api-Key": "OWVjYTc1MGItMmQ3Yi00ZmYwLTg0MDgtMWQ1MWE2MGIzNDZl",
     "Content-Type": "application/json"
   },
   "body": {
-    "name": "Academy",
-    "isPublic": "false",
-    "hourlyRate": {
-      "amount": 0
-    },
-    "color": "#000000",
-    "billable": "true",
-    "archived": "true"
+  "name": "My_Project",
+  "clientId": "",
+  "isPublic": "false",
+  "hourlyRate": {
+    "amount": 3600
   },
-  "endpoint": "/workspaces/614b795a8fc8f836af59328a/projects/62840c55c275545159e60909"
+  "color": "#f44336",
+  "note": "This is project's note (optional)",
+  "billable": "true",
+  "archived": "true"
+},
+  "endpoint": "/workspaces/6284190cbf8ca01b7b85a380/projects/628455aebf8ca01b7b88297b"
 }

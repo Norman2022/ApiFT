@@ -1,6 +1,5 @@
 package api.config;
 
-import api.model.ErrorResponse;
 import services.*;
 
 public enum EntityConfiguration {
@@ -28,6 +27,18 @@ public enum EntityConfiguration {
         @Override
         public Class<?> getEntityService() {
             return ProjectService.class;
+        }
+    },
+    PROJECTBYID {
+        @Override
+        public Class<?> getEntityService() {
+            return ProjectServiceById.class;
+        }
+    },
+    PROJECT_PARAM {
+        @Override
+        public Class<?> getEntityService() {
+            return ProjectServiceParam.class;
         }
     },
     ERROR {

@@ -1,6 +1,5 @@
 package services;
 
-import api.model.ErrorResponse;
 import api.model.workspaces.WorkspacesResponse;
 import com.crowdar.api.rest.Response;
 import com.crowdar.core.PropertyManager;

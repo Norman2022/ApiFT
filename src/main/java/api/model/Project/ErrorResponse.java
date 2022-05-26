@@ -1,4 +1,4 @@
-package api.model;
+package api.model.Project;
 
 public class ErrorResponse {
     private String message;
