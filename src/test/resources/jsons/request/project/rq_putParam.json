@@ -8,7 +8,7 @@
   "body": {
   "start": "2022-07-12T13:48:14.000Z",
   "billable": "true",
-  "description": "TestTime100",
+  "description": "{{nombre}}",
   "projectId": "62b1f82910ada94984384896",
   "taskId": "",
   "end": "2022-07-12T13:50:14.000Z",
@@ -23,5 +23,5 @@
   ]
 
   },
-  "endpoint": "/workspaces/62b1f7cc04cf142e40f50644/time-entries/62b290cec22de9759e78f829"
+  "endpoint": "/workspaces/62b1f7cc04cf142e40f50644/time-entries/{{id}}"
 }

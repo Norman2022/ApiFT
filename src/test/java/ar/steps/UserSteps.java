@@ -1,10 +1,9 @@
 package ar.steps;
 
 import api.config.EntityConfiguration;
-import api.model.Data;
+import ar.validator.ProjectValidator;
 import com.crowdar.api.rest.APIManager;
 import com.crowdar.core.PageSteps;
-import io.cucumber.java.en.*;
 import com.google.api.client.repackaged.com.google.common.base.Splitter;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -13,7 +12,6 @@ import org.apache.commons.lang.StringUtils;
 import org.testng.Assert;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Map;
 
 public class UserSteps extends PageSteps {
@@ -44,11 +42,29 @@ public class UserSteps extends PageSteps {
         Assert.assertEquals(Integer.parseInt(expStatusCode), actualStatusCode, "The status code are not equals");
     }
 
-    @And("^The proper '(.*)' '(.*)' returned in the response$")
-    public void theProperIdReturnedInTheResponse(String property, String value) {
-        if (!value.isEmpty()) {
-            Data response = (Data) APIManager.getLastResponse().getResponse();
-            Assert.assertEquals(String.valueOf(response.getUser().getId()), value, "The " + property + " is not in the response");
-        }
+
+
+    @io.cucumber.java.en.Then("el Time Entry con el nombre {string} no se encuentra en la lista")
+    public void elTimeEntryConElNombreNombreNoSeEncuentraEnLaLista(String nombre) {
+        validator.validateNombresEliminado(nombre);
+
+    }
+
+
+    ProjectValidator validator = new ProjectValidator();
+    @io.cucumber.java.en.Then("se valida la cantidad de projects")
+    public void seValidaLaCantidadDeProjects() {
+        validator.validate();
+    }
+
+
+    @io.cucumber.java.en.Then("el project con el nombre {string} se encuentra en la lista")
+    public void elProjectConElNombreNombreSeEncuentraEnLaLista(String nombre) {
+        validator.validateNombresEsperado(nombre);
+    }
+
+    @io.cucumber.java.en.Then("el Time Entry con el nombre {string} se encuentra en la lista")
+    public void elTimeEntryConElNombreNombreSeEncuentraEnLaLista(String nombre) {
+        validator.validateNombresEsperado(nombre);
     }
 }

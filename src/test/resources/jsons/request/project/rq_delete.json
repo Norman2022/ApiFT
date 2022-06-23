@@ -4,5 +4,5 @@
     "X-Api-Key": "OWVjYTc1MGItMmQ3Yi00ZmYwLTg0MDgtMWQ1MWE2MGIzNDZl",
     "Content-Type": "application/json"
   },
-  "endpoint": "/workspace"
+  "endpoint": "/workspaces/62b1f7cc04cf142e40f50644/time-entries/62b2a04bc22de9759e78fe81"
 }
